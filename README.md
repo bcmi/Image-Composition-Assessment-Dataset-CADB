@@ -11,4 +11,4 @@ Bo Zhang, Li Niu, Liqing Zhang
 
 ## Downloads
 
-The CADB dataset and training/testing split are provided in [[Baidu Cloud]](https://pan.baidu.com/s/1XKUR16PC-GA0yLA1RL-WJA)(access code: *rvgn*).
+The CADB dataset and training(8547 images)/testing(950 images) split are provided in [[Baidu Cloud]](https://pan.baidu.com/s/1XKUR16PC-GA0yLA1RL-WJA)(access code: *rvgn*).
