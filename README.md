@@ -11,6 +11,8 @@ Image composition assessment aims to assess the overall composition quality of a
 
 Bo Zhang, Li Niu, Liqing Zhang
 
+More details about CADB dataset and consistency analysis of the annotations can be found in this paper.
+
 ## Downloads
 
 The CADB dataset and training(8,547 images)/testing(950 images) split are provided in [[Baidu Cloud]](https://pan.baidu.com/s/1XKUR16PC-GA0yLA1RL-WJA)(access code: *rvgn*).
