@@ -1,7 +1,8 @@
 
 
 > # Image Composition Assessment Dataset
-> Welcomes to the offical homepage of Image Composition Assessment DataBase (**CADB**) !
+> Welcomes to the offical homepage of Image Composition Assessment DataBase (**CADB**).
+> 
 > Image composition assessment aims to assess the overall composition quality of a given image, which is crucial in aesthetic assessment.
 > To support the research on this task, we contribute the first image composition assessment dataset. Furthermore, we we propose a composition assessment network **SAMP-Net** 
 > with a novel Saliency-Augmented Multi-pattern Pooling (**SAMP**) module, which can perform more favorably than previous aesthetic assessment approaches.
