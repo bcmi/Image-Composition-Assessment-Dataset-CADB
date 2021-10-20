@@ -5,7 +5,7 @@
 > Image composition assessment aims to assess the overall composition quality of a given image, which is crucial in aesthetic assessment.
 > To support the research on this task, we contribute the first image composition assessment dataset. Furthermore, we we propose a composition assessment network **SAMP-Net** 
 > with a novel Saliency-Augmented Multi-pattern Pooling (**SAMP**) module, which can perform more favorably than previous aesthetic assessment approaches.
-> This work has been accepted by BMVC 2021 ([paper](https://arxiv.org/pdf/2104.03133.pdf)).  
+> This work has been accepted by BMVC 2021 ([**paper**](https://arxiv.org/pdf/2104.03133.pdf)).  
 
 **Table of Contents**
 
@@ -27,24 +27,34 @@
 
 ## Introduction
 
-We built the CADB dataset upon the existing Aesthetics and Attributes DataBase ([AADB](https://github.com/aimerykong/deepImageAestheticsAnalysis)). CADB dataset contains 9,497 images with each image rated by 5 individual raters who specialize in fine art for the overall composition quality, in which we provide a composition rating scale from 1 to 5, where a larger score indicates better composition. Some example images with annotations in CADB dataset are illustrated in the figure below, in which we show five composition scores provided by five raters in blue and the calculated composition mean score in red.
+We built the CADB dataset upon the existing Aesthetics and Attributes DataBase ([AADB](https://github.com/aimerykong/deepImageAestheticsAnalysis)). CADB dataset contains **9,497** images with each image rated by **5 individual raters** who specialize in fine art for the overall composition quality, in which we provide a **composition rating scale from 1 to 5**, where a larger score indicates better composition. Some example images with annotations in CADB dataset are illustrated in the figure below, in which we show five composition scores provided by five raters in blue and the calculated composition mean score in red. We also show the aesthetic scores annotated by AADB dataset on a scale from 1 to 5 in green.
 
 <img src='examples/annotation_example.jpg' align="center" width=1024>
 
 ## Download
-Download dataset (~2GB) from 
+Download ``CADB_Dataset.zip`` (~2GB) from 
 [[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
 
 # Method Overview
 
 ## Motivation
+As shown in the following Figure, each **composition pattern** divides the holistic image into multiple non-overlapping partitions, which can model
+human perception of composition quality. By analyzing the **visual layout** (e.g., positions and sizes of visual elements) according to composition pattern, i.e., comparing the
+visual elements in various partitions, we can quantify the aesthetics of visual layout in terms of **visual balance** (e.g., symmetrical balance and radial balance), **composition rules** (e.g., rule of thirds, diagonals and triangles), and so on. Different composition patterns offer different perspectives to evaluate composition quality. For example, the composition pattern in the top (resp., bottom) row can help judge the composition quality in terms of symmetrical (resp., radial) balance.
 
-<img src=''>
+<img src='examples/example.jpg' align="center" width=400>
 
 ## SAMP-Net
+To accomplish the composition assessment task, we propose a novel network SAMP-Net, which is named after **Saliency-Augmented Multi-pattern Pooling (SAMP)** module. 
+The overall pipeline of our method is illustrated in the following Figure, where we first extract the global feature map from input image by backbone and then yield aggregated
+pattern feature through our SAMP module, which is followed by **Attentional Attribute Feature Fusion (AAFF)** module to fuse the composition feature and attribute feature. After that, we predict **composition score distribution** based on the fused feature and predict the attribute score based on the attribute feature, which are supervised by **weighted EMD loss** and Mean Squared Error (MSE) loss respectively.
+
+<img src='examples/samp_net.jpg' align="center" width=960>
 
 # Results
+We show the input image, its saliency map, its ground-truth/predicted composition mean score, and its pattern weights in below Figure. Moreover, our method predicts the pattern weights which indicate the importance of different patterns on the overall composition quality. For each image, the composition pattern with the largest weight is referred to as its **dominant pattern** and we overly this pattern on the image. The dominant pattern helps to reveal from which perspective the input image is given a high or low score, which further provide constructive suggestions for improving the composition quality. In the left figure of the third row, per the low score under the center pattern, the dog is suggested to be moved to the center.   
 
+<img src='examples/interpretability.jpg' align="center" width=960>
 
 # Code Usage
 ```bash
@@ -69,7 +79,7 @@ You can download pretrained model (~180MB) from [[Google Drive]](https://drive.g
    python test.py
    ```
 
-## Citation
+# Citation
 ```
 @article{zhang2021image,
   title={Image Composition Assessment with Saliency-augmented Multi-pattern Pooling},
