@@ -15,4 +15,4 @@ More details about CADB dataset and consistency analysis of the annotations can 
 
 ## Downloads
 
-The CADB dataset and training(8,547 images)/testing(950 images) split are provided in [[Baidu Cloud]](https://pan.baidu.com/s/1XKUR16PC-GA0yLA1RL-WJA)(access code: *rvgn*).
+The CADB dataset and training(8,547 images)/testing(950 images) split are provided in [[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
