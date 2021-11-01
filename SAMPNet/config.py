@@ -25,7 +25,7 @@ class Config:
     # "score" "RuleOfThirds" "Repetition"
     # "BalacingElements" "ColorHarmony" "MotionBlur"
     # "VividColor" "DoF" "Content"
-    attribute_types = ['RuleOfThirds', 'BalacingElements','DoF'
+    attribute_types = ['RuleOfThirds', 'BalacingElements','DoF',
                        'Object', 'Symmetry', 'Repetition']
     num_attributes = len(attribute_types)
     attribute_weight = 0.1

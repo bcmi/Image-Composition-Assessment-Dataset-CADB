@@ -1,0 +1,9 @@
+einops==0.3.0
+numpy==1.19.1
+opencv_contrib_python==4.4.0.46
+Pillow==8.4.0
+scipy==1.5.2
+tensorboardX==2.4
+torch==1.9.1
+torchvision==0.9.0+cu111
+tqdm==4.51.0
