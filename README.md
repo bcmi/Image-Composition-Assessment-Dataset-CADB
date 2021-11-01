@@ -77,6 +77,7 @@ We show the input image, its saliency map, its ground-truth/predicted compositio
 - scipy
 - tqdm
 
+Or you can refer to [``requirement.txt``](./SAMPNet/requirements.txt).  
 
 ## Training
 ```bash
