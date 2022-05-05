@@ -15,6 +15,7 @@
 - [Dataset](#dataset)
   - [Introduction](#introduction)
   - [Download](#download)
+  - [Visualization](#vis_annotation)
 - [Method Overview](#method-overview)
   - [Motivation](#motivation)
   - [SAMP-Net](#samp-net)
@@ -34,9 +35,32 @@ We built the CADB dataset upon the existing Aesthetics and Attributes DataBase (
 <img src='examples/annotation_example.jpg' align="center" width="100%">
 </div>
 
+<div  align="center">
+<img src='examples/element_examples.jpg' align="center" width="95%">
+</div>
+
 ## Download
 Download ``CADB_Dataset.zip`` (~2GB) from 
 [[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
+
+## Visualizing Annotations
+Put the json files in the ``annotations`` folder into the CADB dataset directory ``CADB_Dataset``. Then we obtain the file structure below:
+```
+CADB_Dataset
+├── composition_elements.json
+├── composition_scores.json
+├── scene_categories.json
+└── images
+    ├── 10000.jpg
+    ├── 10001.jpg
+    ├── 10002.jpg
+    ├── ……
+```
+Visualizing the annotations of composition score, scene category, and composition element:
+```bash
+python annotations/visualize_cadb_annotation.py --data_root ./CADB_Dataset
+```
+The visualized results will be stored in ``CADB_Dataset/Visualization``.
 
 # Method Overview
 
