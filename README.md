@@ -4,9 +4,11 @@
 > Welcomes to the offical homepage of Image Composition Assessment DataBase (**CADB**).
 > 
 > Image composition assessment aims to assess the overall composition quality of a given image, which is crucial in aesthetic assessment.
-> To support the research on this task, we contribute the first image composition assessment dataset. Furthermore, we we propose a composition assessment network **SAMP-Net** 
+> To support the research on this task, we contribute the first image composition assessment dataset. Furthermore, we propose a composition assessment network **SAMP-Net** 
 > with a novel Saliency-Augmented Multi-pattern Pooling (**SAMP**) module, which can perform more favorably than previous aesthetic assessment approaches.
 > This work has been accepted by BMVC 2021 ([**paper**](https://arxiv.org/pdf/2104.03133.pdf)).
+
+**Update 2022-05-05**: We release the annotations of scene categories, composition classes as well as composition elements for more fine-grained analysis of image composition quality. 
 
 **Table of Contents**
 
