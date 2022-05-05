@@ -6,7 +6,7 @@
 > Image composition assessment aims to assess the overall composition quality of a given image, which is crucial in aesthetic assessment.
 > To support the research on this task, we contribute the first image composition assessment dataset. Furthermore, we we propose a composition assessment network **SAMP-Net** 
 > with a novel Saliency-Augmented Multi-pattern Pooling (**SAMP**) module, which can perform more favorably than previous aesthetic assessment approaches.
-> This work has been accepted by BMVC 2021 ([**paper**](https://arxiv.org/pdf/2104.03133.pdf)).  
+> This work has been accepted by BMVC 2021 ([**paper**](https://arxiv.org/pdf/2104.03133.pdf)).
 
 **Table of Contents**
 
@@ -35,6 +35,7 @@ We built the CADB dataset upon the existing Aesthetics and Attributes DataBase (
 <img src='examples/annotation_example.jpg' align="center" width="100%">
 </div>
 
+To facilitate the study of image composition assessment, apart from the composition score, we also annotate scene categories, composition classes as well as elements for each image. Specifically, we carefully select 9 frequently appeared scenes (including ***animal, plant, human, static, architecture, landscape, cityscape, indoor, night***) and 1 *other* class specially refers to images without obvious meaning. As for composition classes, we categorize the common photographic composition rules into 13 classes: ***center, rule of thirds, golden ratio, triangle, horizontal, vertical, diagonal, symmetric, curved, radial, vanishing point, pattern, fill the frame***, and assign *none* class to the images without obvious composition rules, in which each image is annotated with one or more composition classes. Moreover, we annotate the dominant composition elements for each composition class except pattern and fill the frame, as illustrated in the figure below. We mark composition elements in yellow and add white auxiliary gridlines to some composition classes for better viewing.
 <div  align="center">
 <img src='examples/element_examples.jpg' align="center" width="95%">
 </div>
@@ -42,6 +43,7 @@ We built the CADB dataset upon the existing Aesthetics and Attributes DataBase (
 ## Download
 Download ``CADB_Dataset.zip`` (~2GB) from 
 [[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
+The annotations of scene categories and composition elements can be found in ``annotations`` folder of this repository  
 
 ## Visualizing Annotations
 Put the json files in the ``annotations`` folder into the CADB dataset directory ``CADB_Dataset``. Then we obtain the file structure below:
