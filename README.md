@@ -45,7 +45,7 @@ To facilitate the study of image composition assessment, apart from the composit
 ## Download
 Download ``CADB_Dataset.zip`` (~2GB) from 
 [[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
-The annotations of scene categories and composition elements can be found in ``annotations`` folder of this repository  
+The annotations of scene categories, composition classes as well as elements can be found in ``annotations`` folder of this repository.  
 
 ## Visualizing Annotations
 Put the json files in the ``annotations`` folder into the CADB dataset directory ``CADB_Dataset``. Then we obtain the file structure below:
