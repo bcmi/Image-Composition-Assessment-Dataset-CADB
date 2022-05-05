@@ -17,7 +17,7 @@
 - [Dataset](#dataset)
   - [Introduction](#introduction)
   - [Download](#download)
-  - [Visualization](#vis_annotation)
+  - [Visualizing Annotations](#visualizing-annotations)
 - [Method Overview](#method-overview)
   - [Motivation](#motivation)
   - [SAMP-Net](#samp-net)
