@@ -17,7 +17,6 @@
 - [Dataset](#dataset)
   - [Introduction](#introduction)
   - [Download](#download)
-  - [Visualizing Annotations](#visualizing-annotations)
 - [Method Overview](#method-overview)
   - [Motivation](#motivation)
   - [SAMP-Net](#samp-net)
@@ -44,15 +43,12 @@ To facilitate the study of image composition assessment, apart from the composit
 
 ## Download
 Download ``CADB_Dataset.zip`` (~2GB) from 
-[[Google Drive]](https://drive.google.com/file/d/1fpZoo5exRfoarqDvdLDpQVXVOKFW63vz/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/1o3AktNB-kmOIanJtzEx98g)(access code: *rmnb*).
-The annotations of scene categories, composition classes as well as elements can be found in ``annotations`` folder of this repository.  
-
-## Visualizing Annotations
-Put the json files in the ``annotations`` folder into the CADB dataset directory ``CADB_Dataset``. Then we obtain the file structure below:
+[[Dropbox]](https://www.dropbox.com/scl/fi/fvlsnit7on6218szply4q/CADB_Dataset.zip?rlkey=mwt9eftdhmnawomv44x4deliw&st=8fzb5vej&dl=0) | [[Baidu Cloud]](https://pan.baidu.com/s/1MrOSj35re84dLLNk72CLQQ?pwd=xkar). The file structure is as follows.
 ```
 CADB_Dataset
 ├── composition_elements.json
 ├── composition_scores.json
+|── composition_attributes.json
 ├── scene_categories.json
 └── images
     ├── 10000.jpg
@@ -65,6 +61,9 @@ Visualizing the annotations of composition score, scene category, and compositio
 python annotations/visualize_cadb_annotation.py --data_root ./CADB_Dataset
 ```
 The visualized results will be stored in ``CADB_Dataset/Visualization``.
+
+In `composition_scores.json`, each image has 5 scores from 5 human annotators and *dist* means the distribution over 5 score levels [1, 2, 3, 4, 5]. 'composition_attributes.json' includes the attribute annotations copied from [AADB](https://www.cs.cmu.edu/~shuk/aesthetics.html) dataset. 
+
 
 # Method Overview
 
@@ -116,7 +115,7 @@ Or you can refer to [``requirement.txt``](./SAMPNet/requirements.txt).
 During training, the evaluation results of each epoch are recorded in a ``csv`` format file under the produced folder ``./experiments``.
 
 ## Testing
-You can download pretrained model (~180MB) from [[Google Drive]](https://drive.google.com/file/d/1sIcYr5cQGbxm--tCGaASmN0xtE_r-QUg/view?usp=sharing) | [[Baidu Cloud]](https://pan.baidu.com/s/17EzhsbHqwA5aR8ty77fTvw)(access code: *5qgg*). 
+You can download pretrained model (~180MB) from [[Dropbox]](https://www.dropbox.com/scl/fi/k1yuyhotuk9ky3m41iobg/samp_net.pth?rlkey=aoqqxv27wd5qqj3pytxki6vi3&st=0ffubx5d&dl=0) | [[Baidu Cloud]](https://pan.baidu.com/s/17EzhsbHqwA5aR8ty77fTvw)(access code: *5qgg*). 
 ```bash
    # place the pretrianed model in the folder ``pretrained_model`` and check the path in ``test.py``.
    # change the default gpu id in config.py
